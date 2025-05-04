@@ -1,0 +1,20 @@
+framework: net8.0
+storage: none
+
+nuget FSharp.Core 8.0.1
+nuget Fsharp.Data prerelease
+nuget Isharp.wargh
+
+group Build
+framework: net8.0
+storage: none
+
+nuget FSharp.Core
+nuget Fsharp.Data
+
+group Migrations
+framework: net8.0
+storage: none
+
+nuget Microsoft.whatever.framework
+nuget Entityomething

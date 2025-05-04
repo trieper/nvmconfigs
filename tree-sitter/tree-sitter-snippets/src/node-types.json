@@ -1,0 +1,124 @@
+[
+  {
+    "type": "python_global_block",
+    "named": true,
+    "fields": {
+      "python": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "python_global_block_concat",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "python_global_block_concat",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "snippet_block",
+    "named": true,
+    "fields": {
+      "python_inline": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "python_inline",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {
+      "language": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "language_name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "python_global_block",
+          "named": true
+        },
+        {
+          "type": "snippet_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "`",
+    "named": false
+  },
+  {
+    "type": "`!p",
+    "named": false
+  },
+  {
+    "type": "endglobal",
+    "named": false
+  },
+  {
+    "type": "endsnippet",
+    "named": false
+  },
+  {
+    "type": "global",
+    "named": false
+  },
+  {
+    "type": "language=",
+    "named": false
+  },
+  {
+    "type": "language_name",
+    "named": true
+  },
+  {
+    "type": "python_inline",
+    "named": true
+  },
+  {
+    "type": "snippet",
+    "named": false
+  },
+  {
+    "type": "text",
+    "named": true
+  }
+]

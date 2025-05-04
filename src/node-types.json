@@ -1,0 +1,76 @@
+[
+  {
+    "type": "language_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "language_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "snippet_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "language_declaration",
+          "named": true
+        },
+        {
+          "type": "snippet_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "endsnippet",
+    "named": false
+  },
+  {
+    "type": "language=",
+    "named": false
+  },
+  {
+    "type": "language_name",
+    "named": true
+  },
+  {
+    "type": "line",
+    "named": true
+  },
+  {
+    "type": "snippet",
+    "named": false
+  }
+]

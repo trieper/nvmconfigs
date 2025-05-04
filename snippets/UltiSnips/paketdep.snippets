@@ -1,0 +1,29 @@
+# language=paketdep
+
+global !p
+print("Hello World")
+def hallo():
+	print("ok")
+	print("ok")
+endglobal
+
+snippet group "Paket Gruppe"
+group Build 
+framework: net8.0
+storage: none
+
+nuget FSharp.Core
+nuget Fake
+endsnippet
+
+snippet mainandbuild "Paket Gruppen"
+framework: net8.0
+storage: none
+
+nuget FSharp.Core
+nuget Fake
+
+group Build 
+nuget FSharp.Core
+nuget Fake
+endsnippet

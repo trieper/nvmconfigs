@@ -1,0 +1,38 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "snippets",
+      "camelcase": "Snippets",
+      "title": "Snippets",
+      "scope": "source.snippets",
+      "file-types": [
+        "snippets"
+      ],
+      "injection-regex": "^snippets$",
+      "class-name": "TreeSitterSnippets"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.7",
+    "license": "MIT",
+    "description": "Snippets grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "x"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter/tree-sitter-snippets"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
