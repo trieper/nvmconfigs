@@ -1,4 +1,3 @@
-local injection = require 'custom.plugins.injection'
 return {
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',

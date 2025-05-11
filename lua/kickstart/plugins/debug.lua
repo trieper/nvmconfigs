@@ -88,7 +88,16 @@ return {
 
       -- You can provide additional configuration to the handlers,
       -- see mason-nvim-dap README for more information
-      handlers = {},
+      handlers = {
+        coreclr = function(config)
+          config.adapters = {
+            type = 'executable',
+            command = 'netcoredbg',
+            args = { '--interpreter=vscode' },
+          }
+          require('mason-nvim-dap').default_setup(config) -- don't forget this!
+        end,
+      },
 
       -- You'll need to check that you have the required things installed
       -- online, please don't ask me how to install them :)
@@ -166,7 +175,8 @@ return {
         name = 'launch - netcoredbg',
         request = 'launch',
         program = function()
-          return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
+          -- TODO: austauschen
+          return vim.fn.input('Path  dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
         end,
       },
     }

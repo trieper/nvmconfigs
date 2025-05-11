@@ -7,6 +7,7 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        python = { 'codespell' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
@@ -52,6 +53,7 @@ return {
           -- describe the hovered symbol using Markdown.
           if vim.opt_local.modifiable:get() then
             lint.try_lint()
+            lint.try_lint 'codespell'
           end
         end,
       })
