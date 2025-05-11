@@ -160,6 +160,9 @@ return {
               vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
             end, '[T]oggle Inlay [H]ints')
           end
+
+          --- spellcheck
+          pcall(require('ltex-utils').on_attach(event.buf))
         end,
       })
 
@@ -237,6 +240,7 @@ return {
         },
         -- NOTE: Ls für treesitter query files
         ts_query_ls = {},
+        ltex = {},
       }
 
       -- lspconfig.
@@ -262,6 +266,7 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'markdownlint',
+        'codespell',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -282,6 +287,7 @@ return {
 
       -- NOTE: ts_query_ls
       vim.lsp.enable 'ts_query_ls'
+      vim.lsp.enable 'ltex'
     end,
   },
 }
