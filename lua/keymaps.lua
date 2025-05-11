@@ -1,6 +1,3 @@
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
-
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -114,7 +111,18 @@ vim.keymap.set('n', '<leader>-yp', function()
   nav.call_with_count(nav.yank_put_line_before)
 end, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>yp', function()
-  nav.call_with_count(nav.yank_put_line_before)
+  nav.call_ith_count(nav.yank_put_line_before)
 end, { noremap = true, silent = true })
+
+-- MIGRATE: spelling
+vim.keymap.set('n', '<leader>tsp', function()
+  require('utils.spelling').toggle_spellcheck()
+end, { desc = 'Toggle: spell' })
+
+vim.keymap.set('n', '<leader>tsl', function()
+  require('utils.spelling').switch_language()
+end, { desc = 'Toggle: spell language' })
+-- Hullo
+vim.keymap.set('n', 'zs', '1z=', { silent = true, desc = 'Spell: erste suggestion' })
 
 -- vim: ts=2 sts=2 sw=2 et
