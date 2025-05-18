@@ -12,5 +12,6 @@ return {
         vim_cmd_output = false,
       },
     },
+    cond = false,
   },
 }
